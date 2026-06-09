@@ -1,5 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
+import { Nav } from "./components/nav";
+import { Footer } from "./components/footer";
+import { RevealObserver } from "./components/reveal-observer";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -44,25 +47,10 @@ export default function RootLayout({
             })();
           `}
         </Script>
-        <Script id="orbit-reveal" strategy="lazyOnload">
-          {`
-            (() => {
-              const observer = new IntersectionObserver(
-                (entries) => {
-                  entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                      entry.target.classList.add('revealed');
-                      observer.unobserve(entry.target);
-                    }
-                  });
-                },
-                { threshold: 0.1, rootMargin: '0px 0px -56px 0px' }
-              );
-              document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
-            })();
-          `}
-        </Script>
+        <RevealObserver />
+        <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -8,7 +8,6 @@ import {
   Cpu,
   Globe2,
   Mail,
-  MessageCircle,
   MousePointerClick,
   PhoneCall,
   Play,
@@ -19,8 +18,6 @@ import {
   Workflow,
   Zap
 } from "lucide-react";
-import { MobileNav } from "./mobile-nav";
-import { ThemeToggle } from "./theme-toggle";
 import { OrbitLogo } from "./orbit-logo";
 
 const stats = [
@@ -108,27 +105,6 @@ const packages = [
 export default function Home() {
   return (
     <main className="site-shell">
-      <nav className="nav" aria-label="Principal">
-        <a className="brand" href="#inicio" aria-label="ORBIT inicio">
-          <OrbitLogo size={42} />
-          <span>ORBIT</span>
-        </a>
-        <div className="nav-links">
-          <a href="#servicios">Servicios</a>
-          <a href="#ia">IA</a>
-          <a href="#proceso">Proceso</a>
-          <a href="#contacto">Contacto</a>
-        </div>
-        <div className="nav-actions">
-          <ThemeToggle />
-          <a className="nav-cta" href="#contacto">
-            <MessageCircle size={18} />
-            Hablemos
-          </a>
-          <MobileNav />
-        </div>
-      </nav>
-
       <section className="hero" id="inicio">
         <div className="hero-grid">
           <div className="hero-copy">
@@ -149,7 +125,7 @@ export default function Home() {
                 Agenda una llamada
                 <ArrowRight size={18} />
               </a>
-              <a className="secondary-button" href="#servicios">
+              <a className="secondary-button" href="/servicios">
                 <Play size={17} />
                 Ver soluciones
               </a>
@@ -233,6 +209,12 @@ export default function Home() {
               </article>
             );
           })}
+        </div>
+        <div className="section-cta-row">
+          <a className="secondary-button" href="/servicios">
+            Explorar todos los servicios
+            <ArrowRight size={17} />
+          </a>
         </div>
       </section>
 
@@ -395,15 +377,6 @@ export default function Home() {
           </button>
         </form>
       </section>
-
-      <footer className="footer">
-        <a className="brand" href="#inicio" aria-label="ORBIT inicio">
-          <OrbitLogo size={36} />
-          <span>ORBIT</span>
-        </a>
-        <p>Desarrollo web, software a medida e inteligencia artificial para miPymes.</p>
-        <a href="mailto:orbitbussines0513@gmail.com">orbitbussines0513@gmail.com</a>
-      </footer>
     </main>
   );
 }
