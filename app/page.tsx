@@ -376,7 +376,7 @@ export default function Home() {
             IA conectado a WhatsApp. Si el problema es claro, podemos convertirlo en producto.
           </p>
         </div>
-        <form className="contact-form" action="mailto:hola@orbit.com.co" method="post" encType="text/plain">
+        <form className="contact-form" action="mailto:orbitbussines0513@gmail.com" method="post" encType="text/plain">
           <label>
             Nombre
             <input type="text" name="name" placeholder="Tu nombre" />
@@ -402,7 +402,7 @@ export default function Home() {
           <span>ORBIT</span>
         </a>
         <p>Desarrollo web, software a medida e inteligencia artificial para miPymes.</p>
-        <a href="mailto:hola@orbit.com.co">hola@orbit.com.co</a>
+        <a href="mailto:orbitbussines0513@gmail.com">orbitbussines0513@gmail.com</a>
       </footer>
     </main>
   );
