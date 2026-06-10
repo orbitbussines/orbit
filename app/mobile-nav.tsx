@@ -2,6 +2,7 @@
 
 import { ArrowRight, Menu, MessageCircle, X } from "lucide-react";
 import { OrbitLogo } from "./orbit-logo";
+import { ThemeToggle } from "./theme-toggle";
 import { createPortal } from "react-dom";
 import { useEffect, useState } from "react";
 
@@ -54,6 +55,11 @@ export function MobileNav() {
               {label}
             </a>
           ))}
+        </div>
+
+        <div className="mobile-drawer-theme">
+          <span>Cambiar tema</span>
+          <ThemeToggle />
         </div>
 
         <div className="mobile-drawer-cta">

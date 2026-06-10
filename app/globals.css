@@ -127,11 +127,13 @@ textarea {
   display: grid;
   gap: 20px;
   grid-template-columns: auto 1fr auto;
-  left: clamp(14px, 3vw, 34px);
-  padding: 10px 12px 10px 14px;
+  left: 50%;
+  max-width: 1160px;
+  padding: 10px 20px 10px 20px;
   position: fixed;
-  right: clamp(14px, 3vw, 34px);
   top: 14px;
+  transform: translateX(-50%);
+  width: calc(100% - clamp(28px, 6vw, 80px));
   z-index: 20;
 }
 
@@ -1039,6 +1041,21 @@ p {
   background: var(--option-bg);
 }
 
+.mobile-drawer-theme {
+  align-items: center;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding: 20px 0 4px;
+}
+
+.mobile-drawer-theme span {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 850;
+}
+
 .mobile-drawer-cta {
   margin-top: auto;
   padding-top: 24px;
@@ -1097,17 +1114,18 @@ button {
 /* --- 760px: Teléfono grande / tablet portrait --- */
 @media (max-width: 760px) {
   .nav {
-    grid-template-columns: auto 1fr auto;
+    display: flex;
+    justify-content: space-between;
   }
 
   .nav-links,
-  .nav-cta {
+  .nav-cta,
+  .theme-toggle {
     display: none;
   }
 
   .menu-button {
     display: inline-flex;
-    justify-self: end;
   }
 
   /* Tipografía más legible en móvil */
