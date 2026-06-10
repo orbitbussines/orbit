@@ -1120,7 +1120,7 @@ button {
 
   .nav-links,
   .nav-cta,
-  .theme-toggle {
+  .nav .theme-toggle {
     display: none;
   }
 
