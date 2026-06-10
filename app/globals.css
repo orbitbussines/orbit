@@ -2167,6 +2167,15 @@ button {
   color: var(--mint);
 }
 
+/* Service visual panels — in dark mode the section bg also turns dark,
+   so restore contrast by using var(--panel) (#111322) instead of #090a18 */
+[data-theme="dark"] .service-detail--web .service-visual-panel,
+[data-theme="dark"] .service-detail--ia .service-visual-panel {
+  background: var(--panel);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 80px rgba(169, 140, 255, 0.1);
+}
+
 /* Decorative section number behind content */
 .service-section-num {
   color: var(--ink);
